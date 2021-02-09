@@ -1,0 +1,12 @@
+let sentence = "the subtle sound of gnomes running around in his computer is thought to be what drove him mad...";
+
+let timeout = 0
+for (const char of sentence) {
+  setTimeout(() => {
+    process.stdout.write(char);
+  }, timeout); 
+  timeout += 50;
+}
+setTimeout(() => {
+  process.stdout.write('\n');
+}, timeout);
